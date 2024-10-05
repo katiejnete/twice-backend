@@ -23,6 +23,10 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
 
+app.use("/", (req, res) => {
+  res.send("Welcome to the TwiceLoved API!");
+});
+
 app.use("/auth", authRoutes);
 
 app.use(authenticateJWT);
