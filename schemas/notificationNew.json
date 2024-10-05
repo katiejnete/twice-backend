@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "properties": {
+        "subscriptionId": {
+            "type": "string",
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "description": "A string following the UUID format"
+        },
+        "message": {
+            "type": "string"
+        }
+    },
+    "required": ["subscriptionId", "message"],
+    "additionalProperties": false
+}

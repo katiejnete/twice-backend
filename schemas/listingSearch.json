@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/optional-properties-schema.json",
+    "type": "object",
+    "title": "Optional Properties Schema",
+    "properties": {
+      "category": {
+        "type": "string"
+      },
+      "condition": {
+        "type": "string"
+      },
+      "zip": {
+        "type": "string",
+        "pattern": "^\\d{5}$|^$"
+      },
+      "q": {
+        "type": "string",
+        "maxLength": 100,
+        "description": "An optional string query, max 100 characters"
+      },
+      "sort": {
+        "type": "string",
+        "enum": ["best", "recent", "closest"],
+        "description": "An optional string to define the sort order, allowed values are 'best', 'recent', or 'closest'"
+      },
+      "radius": {
+        "type": "string",
+        "oneOf": [
+          {
+            "enum": [""]
+          },
+          {
+            "pattern": "^[0-9]+$"
+          }
+        ]
+      }
+    },
+    "additionalProperties": false
+  }
+  

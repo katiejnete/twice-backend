@@ -1,0 +1,66 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "title",
+        "description",
+        "categoryId",
+        "conditionId",
+        "locationId"
+    ],
+    "properties": {
+        "title": {
+            "type": "string",
+            "default": "",
+            "title": "The title Schema",
+            "maxLength": 100, 
+            "examples": [
+                "title"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "default": "",
+            "title": "The description Schema",
+            "maxLength": 500,  
+            "examples": [
+                "description"
+            ]
+        },
+        "categoryId": {
+            "type": "integer",
+            "default": 0,
+            "title": "The categoryId Schema",
+            "examples": [
+                1
+            ]
+        },
+        "conditionId": {
+            "type": "integer",
+            "default": 0,
+            "title": "The conditionId Schema",
+            "examples": [
+                1
+            ]
+        },
+        "locationId": {
+            "type": "integer",
+            "default": 0,
+            "title": "The locationId Schema",
+            "examples": [
+                1
+            ]
+        }
+    },
+    "examples": [{
+        "title": "title",
+        "description": "description",
+        "categoryId": 1,
+        "conditionId": 1,
+        "locationId": 1
+    }],
+    "additionalProperties": false
+}

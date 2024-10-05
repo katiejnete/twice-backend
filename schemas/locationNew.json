@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/zip-schema.json",
+    "type": "object",
+    "title": "Zip Code Schema",
+    "properties": {
+      "zip": {
+        "type": "string",
+        "pattern": "^[0-9]{5}$",
+        "description": "A string representing a 5-digit zip code"
+      }
+    },
+    "required": ["zip"],
+    "additionalProperties": false
+  }
+  

@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/userAuth.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": ["colName", "updateVal"],
+    "properties": {
+        "colName": {
+            "type": "string",
+            "enum": [
+                "password",
+                "avatar",
+                "zip",
+                "contactInfo"
+            ],
+            "title": "The colName Schema",
+            "examples": [
+                "username"
+            ]
+        },
+        "updateVal": {
+            "type": "string"
+        },
+        "currentVal": {
+            "type": "string",
+            "title": "The currentVal Schema",
+            "examples": ["oldpassword"]
+        }
+    },
+    "examples": [{
+        "password": "testpassword",
+        "avatar": "1.jpg",
+        "locationId": 1,
+        "contactInfo": "contact info"
+    }],
+    "additionalProperties": false
+  }
