@@ -21,12 +21,6 @@ function getDatabaseUri() {
 
 const BCRYPT_WORK_FACTOR = process.env.NODE_ENV === "test" ? 1 : 12;
 
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET
-})
-
 if (process.env.NODE_ENV !== "test") {
   console.log("TwiceLoved Config:".green);
   console.log("SECRET_KEY:".yellow, SECRET_KEY);
@@ -42,5 +36,4 @@ module.exports = {
   PORT,
   BCRYPT_WORK_FACTOR,
   getDatabaseUri,
-  cloudinary
 };
