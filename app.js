@@ -23,10 +23,6 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
 
-app.use("/", (req, res) => {
-  res.send("Welcome to the TwiceLoved API!");
-});
-
 app.use("/auth", authRoutes);
 
 app.use(authenticateJWT);
@@ -37,6 +33,10 @@ app.use("/listings", listingRoutes);
 app.use("/favorites", favoriteRoutes);
 app.use("/conditions", conditionRoutes);
 app.use("/categories", categoryRoutes);
+app.use("/", (req, res) => {
+  res.send("Welcome to the TwiceLoved API!");
+});
+
 
 /** Handle 404 errors -- this matches everything */
 app.use(function (req, res, next) {
